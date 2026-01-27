@@ -7,12 +7,14 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Cursor from './components/common/Cursor';
 import './styles/global.css';
 
 function App() {
   return (
     <Router>
       <div className="app">
+        <Cursor />
         <Navbar />
         <main>
           <Routes>

@@ -52,8 +52,9 @@
 
 /* Sections */
 .section {
-  padding-top: var(--spacing-section);
-  padding-bottom: var(--spacing-section);
+  padding-top: 6rem !important; /* Increased top spacing */
+  padding-bottom: 6rem !important; /* Balanced bottom spacing */
+  margin-bottom: 2rem !important; /* Reduced margin */
 }
 
 .section-title {
@@ -131,6 +132,8 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 4rem !important; /* Reduced from 10rem */
+  padding-top: 2rem; /* Add specific top space inside container */
 }
 
 .about-text {
@@ -226,8 +229,9 @@
   
   .about-text {
     font-size: 1.05rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem; /* Increased from 2rem */
     line-height: 1.7;
+    padding-bottom: 1rem; /* Extra inner spacing */
   }
 }
 

@@ -1,0 +1,49 @@
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  /* The transition creates the "trailing" lag effect */
+  transition: width 0.2s, height 0.2s, top 0.1s, left 0.1s; 
+}
+
+/* Hover over links/buttons animation */
+body:has(a:hover) .cursor-outline,
+body:has(button:hover) .cursor-outline {
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  background-color: var(--color-primary);
+}
+
+/* Click animation */
+.cursor-outline.clicked {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary);
+  opacity: 0.8;
+}
+
+/* Hide on mobile/touch */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot, 
+  .cursor-outline {
+    display: none;
+  }
+}

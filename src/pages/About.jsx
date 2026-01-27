@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { imageMap } from '../utils/imageMap';
 import '../styles/global.css';
 import '../styles/Pages.css';
 
@@ -22,7 +23,7 @@ const About = () => {
         <section className="page-grid">
           <div className="page-grid-item">
             <img 
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" 
+              src={imageMap.director[0]} 
               alt={companyInfo.director.name}
             />
           </div>

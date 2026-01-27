@@ -4,9 +4,10 @@
     "tagline": "RESIDENTIAL | COMMERCIAL | REDEVELOPMENT | PMC | HOTELS",
     "heroTitle": "Simplicity Is Keynote To Great Design",
     "philosophy": "Good design is produced from careful study and research, combined with technical knowledge and artistic judgment. Its philosophy is built on the dual concepts of client service and design excellence.",
-    "director": {
+  "director": {
       "name": "Uday Kanadia",
       "title": "Director",
+      "imageKey": "director",
       "bio": "Gold Medalist from L.S. Raheja College of Architecture. His dynamic nature and sparkling personality reflect in his work, leaving an everlasting impression on the minds of spectators. His motto is to design, detail and enjoy working in responsive to his client's need in a very honest, efficient and professional manner."
     },
     "contact": {
@@ -20,6 +21,7 @@
     {
       "id": 1,
       "title": "Sky Walks",
+      "imageKey": "sky-walks",
       "category": "Government",
       "client": "Monarch & JV",
       "location": "Bhandup, Mulund, Badlapur, Vidhyavihar, Thane, Kurla & Ullashnagar",
@@ -29,6 +31,7 @@
     {
       "id": 2,
       "title": "SVP Market",
+      "imageKey": "svp-market",
       "category": "Government",
       "client": "MCGM",
       "location": "Dadar, Mumbai",
@@ -38,6 +41,7 @@
     {
       "id": 3,
       "title": "The Erra",
+      "imageKey": "the-erra",
       "category": "Residential",
       "client": "HDIL & Ravi Group",
       "location": "Kandivali West",
@@ -47,6 +51,7 @@
     {
       "id": 4,
       "title": "Windsor Residency",
+      "imageKey": "windsor-residency",
       "category": "Residential",
       "client": "Windsor Group",
       "location": "Andheri West",
@@ -56,6 +61,7 @@
     {
       "id": 5,
       "title": "Villa California",
+      "imageKey": "villa-california",
       "category": "Residential",
       "client": "Aks Infratech",
       "location": "Amleshwar, Raipur",
@@ -65,6 +71,7 @@
     {
       "id": 6,
       "title": "Orion CHS",
+      "imageKey": "orion-chs",
       "category": "Redevelopment",
       "client": "Orion CHS",
       "location": "Charkop, Sector-1",
@@ -74,6 +81,7 @@
     {
       "id": 7,
       "title": "DLH Square",
+      "imageKey": "dlh-square",
       "category": "Redevelopment",
       "client": "DLH Group",
       "location": "Parle West",
@@ -83,6 +91,7 @@
     {
       "id": 8,
       "title": "Brynks Arya",
+      "imageKey": "brynks-arya",
       "category": "Commercial",
       "client": "Brynks Arya",
       "location": "Andheri West",
@@ -92,6 +101,7 @@
     {
       "id": 9,
       "title": "Rajput Mall",
+      "imageKey": "rajput-mall",
       "category": "Commercial",
       "client": "Rajput Group",
       "location": "Boisar",
@@ -101,6 +111,7 @@
     {
       "id": 10,
       "title": "Sai Grandeur Hotel",
+      "imageKey": "sai-grandeur-hotel",
       "category": "Hotels",
       "client": "Shree Sai Realtors",
       "location": "Lonavla",
@@ -110,6 +121,7 @@
     {
       "id": 11,
       "title": "Anand Hotel",
+      "imageKey": "anand-hotel",
       "category": "Hotels",
       "client": "Meeti Developers",
       "location": "Anand, Gujrat",

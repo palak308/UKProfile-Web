@@ -59,42 +59,64 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .page-container {
+    padding-top: 100px;
+  }
+  
+  .page-grid {
+    gap: 3rem;
+  }
+}
+
 @media (max-width: 900px) {
   .page-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
-    margin: 0; /* Reset margins */
+    margin: 0;
+  }
+  
+  .page-grid-item {
+     /* Ensure items don't overflow */
+     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .page-container {
-    padding-top: 80px; /* Reduced top padding */
-    padding-bottom: 2rem;
+    padding-top: 90px;
+    padding-bottom: 3rem;
   }
 
   .page-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
   }
   
   .page-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
     padding: 0 1rem;
   }
 
   .page-grid {
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .page-grid-item img {
-    height: 300px;
+    height: auto;
+    max-height: 400px;
+    width: 100%; 
   }
   
   .contact-form {
-    gap: 1rem;
+    gap: 1.2rem;
+  }
+  
+  .form-input, .form-textarea {
+    padding: 1.2rem; /* Larger touch target */
+    font-size: 16px; /* Prevent zoom on iOS */
   }
 }
 
@@ -103,8 +125,11 @@
     font-size: 1.8rem;
   }
   
+  .page-container {
+    padding-top: 80px;
+  }
+  
   .page-grid-item img {
-    height: auto;
-    max-height: 400px; /* Don't let it get too tall */
+    max-height: 350px;
   }
 }

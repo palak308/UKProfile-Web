@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import data from '../data.json';
+import { imageMap } from '../utils/imageMap';
 import '../styles/Home.css';
 import '../styles/Pages.css';
 
@@ -59,20 +60,25 @@ const Projects = () => {
 
         {/* Grid */}
         <div className="project-grid">
-          {filteredProjects.map(project => (
-            <div key={project.id} className="project-card">
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" 
-                alt={project.title} 
-                className="project-img" 
-              />
+          {filteredProjects.map(project => {
+            const projectImages = imageMap[project.imageKey];
+            const thumbnail = Array.isArray(projectImages) ? projectImages[0] : projectImages;
+
+            return (
+              <div key={project.id} className="project-card">
+                <img 
+                  src={thumbnail || imageMap['sky-walks'][0]} 
+                  alt={project.title} 
+                  className="project-img" 
+                />
               <div className="project-overlay">
                 <p className="project-category">{project.category}</p>
                 <h3 className="project-title">{project.title}</h3>
                 <p style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '0.5rem' }}>{project.location}</p>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
       </div>
     </div>

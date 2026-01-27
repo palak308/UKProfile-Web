@@ -1,0 +1,17 @@
+:root {
+  /* Colors */
+  --color-primary: #D4AF37; /* Luxury Gold */
+  --color-primary-dark: #AA8C2C;
+  --color-bg: #0a0a0a; /* Deep Black */
+  --color-bg-secondary: #0a0a0a; /* Slightly lighter black for cards */
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Syncopate', sans-serif; /* Uppercase modern font */
+  
+  /* Spacing */
+  --spacing-container: 1200px;
+  --spacing-section: 6rem;
+}

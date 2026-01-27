@@ -1,0 +1,120 @@
+{
+  "companyInfo": {
+    "name": "UK DESIGNS PVT.LTD. | UK ARCHITECTS PVT.LTD. | KRATAARTH ARCHITECTS",
+    "tagline": "RESIDENTIAL | COMMERCIAL | REDEVELOPMENT | PMC | HOTELS",
+    "heroTitle": "Simplicity Is Keynote To Great Design",
+    "philosophy": "Good design is produced from careful study and research, combined with technical knowledge and artistic judgment. Its philosophy is built on the dual concepts of client service and design excellence.",
+    "director": {
+      "name": "Uday Kanadia",
+      "title": "Director",
+      "bio": "Gold Medalist from L.S. Raheja College of Architecture. His dynamic nature and sparkling personality reflect in his work, leaving an everlasting impression on the minds of spectators. His motto is to design, detail and enjoy working in responsive to his client's need in a very honest, efficient and professional manner."
+    },
+    "contact": {
+      "address": "409, Highway commercial center, I.B.Patel Road, Laghu Udhyog, Off Western Express Highway, Goregaon (East), Mumbai-400063",
+      "mobile": "+91 98198 85131",
+      "landline": "(022) 26860 356",
+      "email": "udaykanadia@gmail.com"
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Sky Walks",
+      "category": "Government",
+      "client": "Monarch & JV",
+      "location": "Bhandup, Mulund, Badlapur, Vidhyavihar, Thane, Kurla & Ullashnagar",
+      "description": "Public pedestrian walkways for MMRDA ranging from 1km to 2km in length. Structural steel design with deck sheeting and paver tiles.",
+      "status": "Majorly Completed"
+    },
+    {
+      "id": 2,
+      "title": "SVP Market",
+      "category": "Government",
+      "client": "MCGM",
+      "location": "Dadar, Mumbai",
+      "description": "Public market redevelopment (2725 sq. m.) including redesign of stalls, public toilets, and new walkways with daylight sky roof.",
+      "status": "Design Finalized, Tendering Stage"
+    },
+    {
+      "id": 3,
+      "title": "The Erra",
+      "category": "Residential",
+      "client": "HDIL & Ravi Group",
+      "location": "Kandivali West",
+      "description": "High-rise residential complex (90,295 sq. m.) involving residential units, commercial shops, parking podium, and clubhouse.",
+      "status": "Under Construction"
+    },
+    {
+      "id": 4,
+      "title": "Windsor Residency",
+      "category": "Residential",
+      "client": "Windsor Group",
+      "location": "Andheri West",
+      "description": "High-rise residential complex (9000 sq. m.) with podium parking, clubhouse, and recreational areas.",
+      "status": "Completed with O.C"
+    },
+    {
+      "id": 5,
+      "title": "Villa California",
+      "category": "Residential",
+      "client": "Aks Infratech",
+      "location": "Amleshwar, Raipur",
+      "description": "Township project (25 acres) featuring individual villas with swimming pools and public amenities.",
+      "status": "Completed"
+    },
+    {
+      "id": 6,
+      "title": "Orion CHS",
+      "category": "Redevelopment",
+      "client": "Orion CHS",
+      "location": "Charkop, Sector-1",
+      "description": "1st Tallest Building in Self Redevelopment (MHADA). High-rise complex with podium amenities.",
+      "status": "Under Construction"
+    },
+    {
+      "id": 7,
+      "title": "DLH Square",
+      "category": "Redevelopment",
+      "client": "DLH Group",
+      "location": "Parle West",
+      "description": "Redevelopment of high-rise residential complex (1200 sq. m.). Completed successfully.",
+      "status": "Completed with O.C."
+    },
+    {
+      "id": 8,
+      "title": "Brynks Arya",
+      "category": "Commercial",
+      "client": "Brynks Arya",
+      "location": "Andheri West",
+      "description": "Corporate office building with glass facade, two basements, and 11 upper floors.",
+      "status": "Proposal Stage"
+    },
+    {
+      "id": 9,
+      "title": "Rajput Mall",
+      "category": "Commercial",
+      "client": "Rajput Group",
+      "location": "Boisar",
+      "description": "Mall design with modern amenities, shops, and theater.",
+      "status": "Completed"
+    },
+    {
+      "id": 10,
+      "title": "Sai Grandeur Hotel",
+      "category": "Hotels",
+      "client": "Shree Sai Realtors",
+      "location": "Lonavla",
+      "description": "Hotel with shops, banquet, restaurant, and 36 rooms.",
+      "status": "Proposal Stage"
+    },
+    {
+      "id": 11,
+      "title": "Anand Hotel",
+      "category": "Hotels",
+      "client": "Meeti Developers",
+      "location": "Anand, Gujrat",
+      "description": "Hotel with modern amenities, banquet, restaurant, and 36 rooms.",
+      "status": "Under Construction"
+    }
+  ]
+}

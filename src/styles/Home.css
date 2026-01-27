@@ -1,0 +1,237 @@
+/* Home.css */
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Overlay opacity */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* Sections */
+.section {
+  padding: var(--spacing-section) 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--color-text);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 1rem auto 0;
+}
+
+/* Featured Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  height: 400px;
+  background-color: var(--color-bg-secondary);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.project-category {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* About Preview */
+.about-preview {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Awards */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 2px solid var(--color-primary);
+  padding-left: 2rem;
+}
+
+.award-item {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+.award-year {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.award-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.award-org {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0; /* Reduced from 6rem */
+  }
+
+  .hero-title {
+    font-size: 10vw; /* Scales with screen width - ensures it fits */
+    line-height: 1.2;
+    padding: 0 1rem; /* Ensure padding doesn't push it out */
+    width: 100%;
+  }
+  
+  .hero-subtitle {
+    font-size: 3.5vw; /* Also scale subtitle */
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Force stack on mobile */
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    height: 300px; /* Smaller cards on mobile */
+  }
+
+  .about-preview {
+    padding: 0 1rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem; /* Even smaller for very small screens */
+  }
+  
+  .project-card {
+    height: 250px;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}

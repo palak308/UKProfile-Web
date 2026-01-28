@@ -20,8 +20,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center; /* Ensure center of image is focal point */
-  opacity: 0.6; 
+  opacity: 0; 
+  transition: opacity 1.5s ease-in-out;
   z-index: 1;
+}
+
+.hero-background.active {
+  opacity: 0.6;
 }
 
 .hero-content {
@@ -48,6 +53,20 @@
   margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Sections */
@@ -110,7 +129,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem; /* Reduced from 2rem to give more text space */
   background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
 }
 
@@ -123,8 +142,12 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* Slightly reduced from 1.5rem */
   margin-bottom: 0;
+  word-wrap: break-word; /* Ensure long words break */
+  overflow-wrap: break-word;
+  hyphens: auto; /* Hyphenate if necessary */
+  line-height: 1.2;
 }
 
 /* About Preview */
@@ -224,7 +247,7 @@
   }
 
   .about-preview {
-    /* Padding handled by container */
+    padding-bottom: 2rem !important;
   }
   
   .about-text {

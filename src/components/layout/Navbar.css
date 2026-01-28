@@ -20,18 +20,29 @@
 }
 
 .navbar-logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   flex: 1; /* Take up available space */
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 80px; /* Bigger start height */
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+  height: 50px; /* Shrink upon scrolling */
 }
 
 @media (max-width: 480px) {
-  .navbar-logo {
-    font-size: 1.2rem;
+  .logo-img {
+    height: 50px; /* Mobile start height */
+  }
+  
+  .navbar.scrolled .logo-img {
+     height: 40px; /* Mobile scroll height */
   }
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from '../../assets/Logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -34,7 +35,9 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-logo">
-        <Link to="/">UK Design</Link>
+        <Link to="/">
+          <img src={Logo} alt="UK Design Logo" className="logo-img" />
+        </Link>
       </div>
 
       <div className={`navbar-toggle ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>

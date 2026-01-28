@@ -12,11 +12,19 @@ const About = () => {
       <div className="container">
         
         {/* Philosophy Section */}
-        <section>
+        <section className="about-section">
           <h1 className="page-title">About Us</h1>
-          <p className="page-subtitle">
-            {companyInfo.philosophy}
-          </p>
+          <div className="about-content">
+            {companyInfo.aboutUs ? (
+              companyInfo.aboutUs.map((paragraph, index) => (
+                <p key={index} className="about-text-point">
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p className="page-subtitle">{companyInfo.philosophy}</p>
+            )}
+          </div>
         </section>
 
         {/* Director Section */}

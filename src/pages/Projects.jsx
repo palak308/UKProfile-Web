@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import data from '../data.json';
 import { imageMap } from '../utils/imageMap';
 import '../styles/Home.css';
@@ -65,19 +66,21 @@ const Projects = () => {
             const thumbnail = Array.isArray(projectImages) ? projectImages[0] : projectImages;
 
             return (
-              <div key={project.id} className="project-card">
-                <img 
-                  src={thumbnail || imageMap['sky-walks'][0]} 
-                  alt={project.title} 
-                  className="project-img" 
-                />
-              <div className="project-overlay">
-                <p className="project-category">{project.category}</p>
-                <h3 className="project-title">{project.title}</h3>
-                <p style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '0.5rem' }}>{project.location}</p>
-              </div>
-            </div>
-          );
+              <Link to={`/projects/${project.id}`} key={project.id} className="project-card-link">
+                <div className="project-card">
+                  <img 
+                    src={thumbnail || imageMap['sky-walks'][0]} 
+                    alt={project.title} 
+                    className="project-img" 
+                  />
+                  <div className="project-overlay">
+                    <p className="project-category">{project.category}</p>
+                    <h3 className="project-title">{project.title}</h3>
+                    <p style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '0.5rem' }}>{project.location}</p>
+                  </div>
+                </div>
+              </Link>
+            );
         })}
         </div>
       </div>

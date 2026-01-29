@@ -6,6 +6,48 @@ import '../styles/Pages.css';
 const { companyInfo } = data;
 
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = React.useState(''); // 'sending', 'success', 'error'
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${companyInfo.contact.email}`, {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "New Contact Message from UK Profile Website"
+        })
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="contact-page page-container">
       <div className="container">
@@ -37,23 +79,53 @@ const Contact = () => {
           {/* Contact Form */}
           <div>
              <h2 style={{ marginBottom: '2rem', color: 'var(--color-primary)' }}>Send a Message</h2>
-             <form className="contact-form">
+             <form className="contact-form" onSubmit={handleSubmit}>
                <input 
                  type="text" 
+                 name="name"
+                 value={formData.name}
+                 onChange={handleChange}
                  placeholder="Your Name" 
                  className="form-input"
+                 required
                />
                <input 
                  type="email" 
+                 name="email"
+                 value={formData.email}
+                 onChange={handleChange}
                  placeholder="Your Email" 
                  className="form-input"
+                 required
                />
                <textarea 
+                 name="message"
+                 value={formData.message}
+                 onChange={handleChange}
                  rows="5" 
                  placeholder="Your Message"
                  className="form-textarea"
+                 required
                ></textarea>
-               <button type="button" className="btn btn-primary">Send Message</button>
+               
+               <button 
+                type="submit" 
+                className="btn btn-primary"
+                disabled={status === 'sending'}
+              >
+                {status === 'sending' ? 'Sending...' : 'Send Message'}
+              </button>
+
+              {status === 'success' && (
+                <p style={{ color: '#4caf50', marginTop: '1rem' }}>
+                  Thank you! Your message has been sent successfully.
+                </p>
+              )}
+              {status === 'error' && (
+                <p style={{ color: '#f44336', marginTop: '1rem' }}>
+                  Something went wrong. Please try again or email us directly.
+                </p>
+              )}
              </form>
           </div>
 

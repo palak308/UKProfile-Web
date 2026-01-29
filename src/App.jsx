@@ -9,11 +9,13 @@ import ProjectDetail from './pages/ProjectDetail';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Cursor from './components/common/Cursor';
+import ScrollToTop from './components/common/ScrollToTop';
 import './styles/global.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Cursor />
         <Navbar />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data.json';
 import { imageMap } from '../utils/imageMap';
+import FadeIn from '../components/common/FadeIn';
 import '../styles/Home.css';
 import '../styles/Pages.css';
 
@@ -43,43 +44,49 @@ const Projects = () => {
     <div className="projects-page page-container">
       <div className="container">
         <header style={{ marginBottom: '3rem' }}>
-          <h1 className="page-title">Our Projects</h1>
+          <FadeIn>
+            <h1 className="page-title">Our Projects</h1>
+          </FadeIn>
         </header>
 
         {/* Filter Bar */}
-        <div style={filterBarStyle}>
-          {categories.map(category => (
-            <button 
-              key={category}
-              style={getFilterBtnStyle(filter === category)}
-              onClick={() => setFilter(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <FadeIn delay={0.2}>
+          <div style={filterBarStyle}>
+            {categories.map(category => (
+              <button 
+                key={category}
+                style={getFilterBtnStyle(filter === category)}
+                onClick={() => setFilter(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </FadeIn>
 
         {/* Grid */}
         <div className="project-grid">
-          {filteredProjects.map(project => {
+          {filteredProjects.map((project, index) => {
             const projectImages = imageMap[project.imageKey];
             const thumbnail = Array.isArray(projectImages) ? projectImages[0] : projectImages;
 
             return (
-              <Link to={`/projects/${project.id}`} key={project.id} className="project-card-link">
-                <div className="project-card">
-                  <img 
-                    src={thumbnail || imageMap['sky-walks'][0]} 
-                    alt={project.title} 
-                    className="project-img" 
-                  />
-                  <div className="project-overlay">
-                    <p className="project-category">{project.category}</p>
-                    <h3 className="project-title">{project.title}</h3>
-                    <p style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '0.5rem' }}>{project.location}</p>
+              <FadeIn key={project.id} delay={index * 0.05}>
+                <Link to={`/projects/${project.id}`} className="project-card-link">
+                  <div className="project-card">
+                    <img 
+                      src={thumbnail || imageMap['sky-walks'][0]} 
+                      alt={project.title} 
+                      className="project-img" 
+                    />
+                    <div className="project-overlay">
+                      <p className="project-category">{project.category}</p>
+                      <h3 className="project-title">{project.title}</h3>
+                      <p style={{ fontSize: '0.9rem', color: '#ccc', marginTop: '0.5rem' }}>{project.location}</p>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </FadeIn>
             );
         })}
         </div>

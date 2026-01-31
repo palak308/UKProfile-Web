@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import FadeIn from '../components/common/FadeIn';
 import '../styles/global.css';
 import '../styles/Pages.css';
 
@@ -51,12 +52,14 @@ const Contact = () => {
   return (
     <div className="contact-page page-container">
       <div className="container">
-        <h1 className="page-title">Get In Touch</h1>
+        <FadeIn>
+          <h1 className="page-title">Get In Touch</h1>
+        </FadeIn>
 
         <div className="page-grid">
           
           {/* Contact Info */}
-          <div>
+          <FadeIn direction="right" delay={0.2}>
             <h2 style={{ marginBottom: '2rem', color: 'var(--color-primary)' }}>Contact Details</h2>
             
             <div style={{ marginBottom: '2rem' }}>
@@ -74,10 +77,10 @@ const Contact = () => {
               <h3 style={{ fontSize: '1rem', color: '#fff', marginBottom: '0.5rem' }}>Email Us</h3>
               <p style={{ color: 'var(--color-text-muted)' }}>{companyInfo.contact.email}</p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Contact Form */}
-          <div>
+          <FadeIn direction="left" delay={0.4}>
              <h2 style={{ marginBottom: '2rem', color: 'var(--color-primary)' }}>Send a Message</h2>
              <form className="contact-form" onSubmit={handleSubmit}>
                <input 
@@ -127,8 +130,7 @@ const Contact = () => {
                 </p>
               )}
              </form>
-          </div>
-
+          </FadeIn>
         </div>
       </div>
     </div>

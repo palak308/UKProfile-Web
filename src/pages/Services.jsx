@@ -52,7 +52,7 @@ const Services = () => {
                 padding: '2rem', 
                 borderRadius: '4px',
                 textAlign: 'center',
-                border: '1px solid #333',
+                border: '1px solid #ddd',
                 height: '100%' 
               }}>
                 <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{service.icon}</div>

@@ -42,7 +42,7 @@
   aspect-ratio: 3/4; /* slightly taller portrait */
   object-fit: cover;
   border-radius: 4px;
-  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
 }
 
 .about-text-point {
@@ -68,8 +68,8 @@
 .form-input, .form-textarea {
   padding: 1rem;
   background: transparent;
-  border: 1px solid #333;
-  color: #fff;
+  border: 1px solid #ddd;
+  color: var(--color-text);
   outline: none;
   width: 100%;
   font-family: var(--font-main);
@@ -215,7 +215,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem; /* Reduced gap */
   margin-bottom: 3rem; /* Reduced from 5rem */
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
   padding-top: 1.5rem; /* Reduced from 2rem */
 }
 

@@ -42,7 +42,7 @@ const About = () => {
           </FadeIn>
           <FadeIn direction="left" delay={0.4}>
             <h2 style={{ color: 'var(--color-primary)', marginBottom: '0.5rem' }}>{companyInfo.director.name}</h2>
-            <h3 style={{ fontSize: '1rem', marginBottom: '2rem', color: '#fff' }}>{companyInfo.director.title}</h3>
+            <h3 style={{ fontSize: '1rem', marginBottom: '2rem', color: 'var(--color-text)' }}>{companyInfo.director.title}</h3>
             <p style={{ lineHeight: '1.8', color: 'var(--color-text-muted)' }}>
               {companyInfo.director.bio}
             </p>

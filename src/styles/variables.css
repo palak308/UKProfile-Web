@@ -2,10 +2,10 @@
   /* Colors */
   --color-primary: #D4AF37; /* Luxury Gold */
   --color-primary-dark: #AA8C2C;
-  --color-bg: #0a0a0a; /* Deep Black */
-  --color-bg-secondary: #0a0a0a; /* Slightly lighter black for cards */
-  --color-text: #ffffff;
-  --color-text-muted: #a0a0a0;
+  --color-bg: #ffffff; /* pure white */
+  --color-bg-secondary: #f9f9f9; /* light gray for sections/cards */
+  --color-text: #121212; /* off-black */
+  --color-text-muted: #666666; /* readable gray */
   
   /* Typography */
   --font-main: 'Inter', sans-serif;

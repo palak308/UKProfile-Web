@@ -3,7 +3,7 @@
   background-color: var(--color-bg-secondary);
   padding: 4rem 2rem 2rem;
   margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 @media (max-width: 480px) {
@@ -55,7 +55,7 @@
   text-align: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(0,0,0,0.05);
   color: var(--color-text-muted);
   font-size: 0.8rem;
 }

@@ -65,7 +65,7 @@ export const imageMap = {
   // Government
   "sky-walks": [SkyWalks1, SkyWalks2],
   "svp-market": [SVPMarket1, SVPMarket2],
-  "grant-road-market": [GrantRoadMarket1, GrantRoadMarket2, GrantRoadMarket3],
+  "grant-road-market": [GrantRoadMarket2, GrantRoadMarket1, GrantRoadMarket3],
 
   // Township
   "township-unlaunched": [LargeIntegrated1, LargeIntegrated2], // Placeholder from existing assets

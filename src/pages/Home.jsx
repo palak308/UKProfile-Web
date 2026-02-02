@@ -65,14 +65,54 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="section container about-preview">
-        <FadeIn>
-          <h2 className="section-title">Designing Possibilities</h2>
-          <p className="about-text">
-            {companyInfo.philosophy}
-          </p>
-          <Link to="/about" className="btn">Read More About Us</Link>
+      {/* Stats Section */}
+      <section className="container">
+        <div className="stats-container">
+          <FadeIn delay={0.1} direction="up">
+            <div className="stat-item">
+              <span className="stats-number">300+</span>
+              <span className="stats-label">Completed Projects</span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.2} direction="up">
+            <div className="stat-item">
+              <span className="stats-number">80+</span>
+              <span className="stats-label">Awards & Recognition</span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.3} direction="up">
+            <div className="stat-item">
+              <span className="stats-number">25+</span>
+              <span className="stats-label">Years of Experience</span>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* About Section Refined */}
+      <section className="section about-preview">
+        <FadeIn direction="left">
+          <div className="about-content">
+            <span className="about-label">ABOUT</span>
+            <h2 className="about-title">Simplicity Is Keynote To Great Design</h2>
+            <p className="about-text">
+              {companyInfo.philosophy}
+            </p>
+            <div>
+              <Link to="/about" className="btn" style={{ borderColor: 'var(--color-accent)', color: 'var(--color-accent)' }}>KNOW MORE</Link>
+            </div>
+          </div>
+        </FadeIn>
+        <FadeIn direction="right" delay={0.2}>
+          <div className="about-sketch-container">
+            {/* Using a placeholder sketch or one of the project images as a subtle background */}
+            <img 
+               src={imageMap['sky-walks']?.[0]} 
+               alt="Architecture Sketch" 
+               className="about-sketch" 
+               style={{ filter: 'grayscale(1) opacity(0.2)' }}
+            />
+          </div>
         </FadeIn>
       </section>
 

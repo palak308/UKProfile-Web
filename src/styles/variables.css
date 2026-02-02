@@ -2,14 +2,15 @@
   /* Colors */
   --color-primary: #D4AF37; /* Luxury Gold */
   --color-primary-dark: #AA8C2C;
+  --color-accent: #FF5733; /* Orange-Coral from screenshot */
   --color-bg: #ffffff; /* pure white */
   --color-bg-secondary: #f9f9f9; /* light gray for sections/cards */
   --color-text: #121212; /* off-black */
   --color-text-muted: #666666; /* readable gray */
   
   /* Typography */
-  --font-main: 'Inter', sans-serif;
-  --font-heading: 'Syncopate', sans-serif; /* Uppercase modern font */
+  --font-main: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   
   /* Spacing */
   --spacing-container: 1200px;

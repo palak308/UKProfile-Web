@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import './variables.css';
 
 /* Global Refinements */
@@ -22,7 +22,6 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
@@ -33,10 +32,31 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  text-transform: none; /* Screenshot uses Sentence Case mostly */
+  letter-spacing: -0.01em; /* Outfit looks better slightly tighter */
   max-width: 100%;
   line-height: 1.2;
+  font-weight: 400; /* Regular weight for that modern look */
+}
+
+h1 {
+  font-weight: 200; /* Extra Light like the screenshot stats */
+  font-size: 3.5rem;
+}
+
+.stats-number {
+  font-weight: 200;
+  font-size: 4rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.stats-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 a {

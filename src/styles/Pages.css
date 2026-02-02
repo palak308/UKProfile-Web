@@ -1,7 +1,7 @@
 /* Pages.css - Shared styles for About, Contact, Projects */
 
 .page-container {
-  padding-top: 120px;
+  padding-top: 160px;
   padding-bottom: 4rem;
   min-height: 100vh;
 }
@@ -72,7 +72,6 @@
   color: var(--color-text);
   outline: none;
   width: 100%;
-  font-family: var(--font-main);
 }
 
 .form-input:focus, .form-textarea:focus {
@@ -82,7 +81,7 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .page-container {
-    padding-top: 100px;
+    padding-top: 140px;
   }
   
   .page-grid {
@@ -106,7 +105,7 @@
 
 @media (max-width: 768px) {
   .page-container {
-    padding-top: 90px;
+    padding-top: 130px;
     padding-bottom: 3rem;
   }
 
@@ -147,7 +146,7 @@
   }
   
   .page-container {
-    padding-top: 80px;
+    padding-top: 120px;
   }
   
   .page-grid-item img {
@@ -187,7 +186,6 @@
 
 .project-category-badge {
   color: var(--color-primary);
-  font-family: var(--font-heading);
   letter-spacing: 0.2em;
   font-size: 0.85rem;
   text-transform: uppercase;

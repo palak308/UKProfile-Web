@@ -15,10 +15,11 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-bg);
+  opacity: 0.95;
   backdrop-filter: blur(10px);
   padding: 0.8rem 2rem;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
 }
 
 .navbar-logo {
@@ -63,6 +64,11 @@
   letter-spacing: 0.1em;
   position: relative;
   white-space: nowrap; /* Prevent wrapping */
+  transition: color 0.3s ease;
+}
+
+.navbar-links a.active {
+  color: var(--color-primary);
 }
 
 .navbar-links a::after {
@@ -113,7 +119,7 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--color-bg);
   }
 
   .navbar-toggle {

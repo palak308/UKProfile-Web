@@ -12,26 +12,32 @@ import Cursor from './components/common/Cursor';
 import ScrollToTop from './components/common/ScrollToTop';
 import './styles/global.css';
 
+import { ThemeProvider } from './context/ThemeContext';
+import ThemeToggle from './components/common/ThemeToggle';
+
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="app">
-        <Cursor />
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="app">
+          <Cursor />
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectDetail />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+          <ThemeToggle />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import './variables.css';
 
 /* Global Refinements */
@@ -6,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-main);
   cursor: none !important; /* Hide default cursor everywhere */
 }
 
@@ -22,25 +22,33 @@ html {
 }
 
 body {
+  font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+input, button, textarea, select {
+  font-family: var(--font-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  text-transform: none; /* Screenshot uses Sentence Case mostly */
-  letter-spacing: -0.01em; /* Outfit looks better slightly tighter */
+  text-transform: none;
+  letter-spacing: -0.01em;
   max-width: 100%;
   line-height: 1.2;
-  font-weight: 400; /* Regular weight for that modern look */
+  font-weight: 500; 
 }
 
 h1 {
-  font-weight: 200; /* Extra Light like the screenshot stats */
+  font-weight: 300; /* Light weight for elegance */
   font-size: 3.5rem;
 }
 

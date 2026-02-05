@@ -1,12 +1,13 @@
 :root {
-  /* Colors */
+  /* Default: Light Theme (Minimalist Gallery) */
   --color-primary: #D4AF37; /* Luxury Gold */
   --color-primary-dark: #AA8C2C;
-  --color-accent: #FF5733; /* Orange-Coral from screenshot */
+  --color-accent: #D4AF37; 
   --color-bg: #ffffff; /* pure white */
   --color-bg-secondary: #f9f9f9; /* light gray for sections/cards */
   --color-text: #121212; /* off-black */
   --color-text-muted: #666666; /* readable gray */
+  --color-border: rgba(0, 0, 0, 0.1);
   
   /* Typography */
   --font-main: 'Montserrat', sans-serif;
@@ -15,4 +16,12 @@
   /* Spacing */
   --spacing-container: 1200px;
   --spacing-section: 6rem;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-muted: #b0b0b0;
+  --color-border: rgba(255, 255, 255, 0.1);
 }
